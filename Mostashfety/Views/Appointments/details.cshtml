@@ -1,0 +1,13 @@
+﻿@model Mostashfety.BLL.ViewModels.AppointmentVM.GetAppointmentVM
+<div class="m-lg-5" style="margin-left: 20px ">
+    <h2>Appointment Details</h2>
+
+    <div>
+        <h3>@Model.DoctorName</h3>
+        <h3>@Model.PatientName</h3>
+        <h4>@Model.AppointmentDate</h4>
+        <h4>@Model.Status</h4>
+     </div>
+
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+</div>

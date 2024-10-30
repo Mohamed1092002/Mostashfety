@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Mostashfety.BLL.ViewModels.AdminVM.GetAdminsVM>
+<div class="m-lg-5" style="margin-left: 20px;">
+    <h2>Admins List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FullName</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>PassWord</th>
+                <th>PhoneNumber</th>
+          
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var admin in Model)
+            {
+                <tr>
+                    <td>@admin.Id</td>
+                    <td>@admin.FullName</td>
+                    <td>@admin.UserName</td>
+                    <td>@admin.Email</td>
+                    <td>@admin.Password</td>
+                    <td>@admin.PhoneNumber</td>
+                    <td>
+                        <a href="@Url.Action("Details", new { id = admin.Id })" class="btn btn-info">Details</a>
+                        <a href="@Url.Action("Edit", new { id = admin.Id })" class="btn btn-warning">Edit</a>
+                        <a href="@Url.Action("Delete", new { id = admin.Id })" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <a href="@Url.Action("Create")" class="btn btn-success">Create New Admin</a>
+</div>

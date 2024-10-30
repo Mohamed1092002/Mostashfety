@@ -1,0 +1,29 @@
+﻿
+@model Mostashfety.BLL.ViewModels.DoctorVM.CreateDoctorVM
+<div class="m-lg-5" style="margin-left: 20px ">
+  
+    <h2>Create Doctor</h2>
+
+    <form asp-action="Create" method="post">
+        <div class="form-group">
+            <label for="FullName">FullName</label>
+            <input asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="specialization">specialization</label>
+            <input asp-for="specialization" class="form-control" />
+            <span asp-validation-for="specialization" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Department">Department</label>
+            <textarea asp-for="Department" class="form-control"></textarea>
+            <span asp-validation-for="Department" class="text-danger"></span>
+        </div>
+        <br/>
+
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+

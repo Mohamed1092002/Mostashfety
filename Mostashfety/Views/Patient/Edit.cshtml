@@ -1,0 +1,31 @@
+﻿@model Mostashfety.BLL.ViewModels.PatientVM.EditPatientVM 
+<div class="m-lg-5" style="margin-left: 20px ">
+    <h2>Edit Patient</h2>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Address">Address</label>
+            <textarea asp-for="Address" class="form-control"></textarea>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="BirthDate">BirthDate</label>
+            <textarea asp-for="BirthDate" class="form-control"></textarea>
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
+        <div class="form-group">
+            <label for="Phone">Phone</label>
+            <textarea asp-for="Phone" class="form-control"></textarea>
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+         <br />
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

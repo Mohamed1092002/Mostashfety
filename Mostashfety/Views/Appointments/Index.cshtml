@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Mostashfety.BLL.ViewModels.AppointmentVM.GetAppointmentVM>
+<div class="m-lg-5" style="margin-left: 20px;">
+    <h2>Appointment List</h2>
+    <table class="table">
+        <thead>
+            
+            <tr>
+                <th>ID</th>
+                <th>DoctorName</th>
+                <th>PatientName</th>
+                <th>AppointmentDate</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appointment in Model)
+            {
+                <tr>
+                    <td>@appointment.Id</td>
+                    <td>@appointment.DoctorName</td>
+                    <td>@appointment.PatientName</td>
+                    <td>@appointment.AppointmentDate</td>
+                    <td>@appointment.Status</td>
+                    <td>
+                        <a href="@Url.Action("Details", new { id = appointment.Id })" class="btn btn-info">Details</a>
+                        <a href="@Url.Action("Edit", new { id = appointment.Id })" class="btn btn-warning">Edit</a>
+                        <a href="@Url.Action("Delete", new { id = appointment.Id })" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="@Url.Action("Create")" class="btn btn-success">Create New Appointment</a>
+</div>

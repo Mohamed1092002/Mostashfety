@@ -1,0 +1,19 @@
+﻿@model Mostashfety.BLL.ViewModels.AppointmentVM.GetAppointmentVM
+<div class="m-lg-5" style="margin-left: 20px ">
+    <h2>Delete Appointment</h2>
+
+    <p>Are you sure you want to delete this Appointment?</p>
+
+    <div>
+        <h4>@Model.DoctorName</h4>
+        <h4>@Model.PatientName</h4>
+        <h4>@Model.AppointmentDate</h4>
+        <h4>@Model.Status</h4>
+    </div>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

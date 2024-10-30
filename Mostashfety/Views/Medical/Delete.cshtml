@@ -1,0 +1,20 @@
+﻿@model Mostashfety.BLL.ViewModels.MedicalVM.GetMedicalVM
+<div class="m-lg-5" style="margin-left: 20px ">
+    <h2>Delete Record</h2>
+
+    <p>Are you sure you want to delete this Record?</p>
+
+    <div>
+        <h4>@Model.DoctorName</h4>
+        <h4>@Model.PatientName</h4>
+        <h4>@Model.Treatment</h4>
+        <h4>@Model.Diagnosis</h4>
+        <h4>@Model.Date</h4>
+    </div>
+    <br />
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

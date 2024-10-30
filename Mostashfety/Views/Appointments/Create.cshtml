@@ -1,0 +1,29 @@
+﻿@model Mostashfety.BLL.ViewModels.AppointmentVM.CreateAppointmentVM
+<div class="m-lg-5" style="margin-left: 20px ">
+    <h2>Create Appiontment</h2>
+
+    <form asp-action="Create" method="post">
+        <div class="form-group">
+            <label for="DoctorName">DoctorName</label>
+            <input asp-for="DoctorName" class="form-control" />
+            <span asp-validation-for="DoctorName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="PatientName">PatientName</label>
+            <input asp-for="PatientName" class="form-control" />
+            <span asp-validation-for="PatientName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Status">Status</label>
+            <textarea asp-for="Status" class="form-control"></textarea>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="AppointmentDate">AppointmentDate</label>
+            <input asp-for="AppointmentDate" class="form-control" />
+            <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+         </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

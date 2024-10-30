@@ -1,0 +1,14 @@
+﻿@model Mostashfety.BLL.ViewModels.MedicalVM.GetMedicalVM
+<div class="m-lg-5" style="margin-left: 20px ">
+    <h2>Record Details</h2>
+
+    <div>
+        <h3>@Model.DoctorName</h3>
+        <h3>@Model.PatientName</h3>
+        <h4>@Model.Diagnosis</h4>
+        <h4>@Model.Treatment</h4>
+        <h4>@Model.Date</h4>
+     </div>
+     <br />
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+</div>
